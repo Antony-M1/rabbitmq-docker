@@ -10,3 +10,5 @@ docker run -d --hostname rebbitmq --name rebbitmq -p 15672:15672 -p 5672:5672 ra
 
 Default Username : `guest`
 Default Password : `guest`
+
+Go To --> `http://localhost:15672`
