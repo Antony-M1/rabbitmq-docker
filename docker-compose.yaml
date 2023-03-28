@@ -3,9 +3,9 @@ version: '3.8'
 services:
   rabbitmq:
     image: rabbitmq:3.9.10
-    build:
-      context: .
-      dockerfile: Dockerfile
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
     container_name: rabbitmq
     hostname: rabbitmq
     restart: always
