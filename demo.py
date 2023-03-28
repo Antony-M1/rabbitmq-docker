@@ -33,3 +33,26 @@ try:
 except Exception as e:
     print('----------------------------Exception Localhost:5672-------------------------------')
     print(e)
+
+print('\n\n')
+
+print('core')
+try:
+    api = AdminAPI(url='http://localhost:15672', auth=('guest', 'guest'))
+    api.create_vhost('second_vhost')
+    api.create_user('second_user', 'password')
+    api.create_user_permission('second_user', 'second_vhost')
+    api.list_permission()
+    print('Success port:15672')
+except Exception as e:
+    print(e)
+
+try:
+    print('core')
+    api = AdminAPI(url='http://localhost:5672', auth=('guest', 'guest'))
+    api.create_vhost('second_vhost')
+    api.create_user('second_user', 'password')
+    api.create_user_permission('second_user', 'second_vhost')
+    api.list_permission()
+except Exception as e:
+    print(e)
